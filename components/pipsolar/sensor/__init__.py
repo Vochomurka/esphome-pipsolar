@@ -187,10 +187,10 @@ TYPES = {
         accuracy_decimals=1,
     ),
     CONF_MAX_CHARGING_TIME_AT_CV_STAGE: sensor.sensor_schema(
-        accuracy_decimals=1,
+        accuracy_decimals=0,
     ),
     CONF_OPERATION_LOGIC: sensor.sensor_schema(
-        accuracy_decimals=1,
+        accuracy_decimals=0,
     ),
     CONF_GRID_VOLTAGE: sensor.sensor_schema(
         unit_of_measurement=UNIT_VOLT,
