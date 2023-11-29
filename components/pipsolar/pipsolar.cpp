@@ -196,7 +196,12 @@ void Pipsolar::loop() {
         if (this->operation_logic_) {
           this->operation_logic_->publish_state(value_operation_logic_);
         }
-
+        //  select for operation_logic
+        if (this->operation_logic_select_) {
+          std::string value = esphome::to_string(value_operation_logic_);
+          this->operation_logic_select_->map_and_publish(value);
+        }
+        
         this->state_ = STATE_IDLE;
         break;
       case POLLING_QPIGS:
@@ -503,7 +508,9 @@ void Pipsolar::loop() {
         /*
         this->current_max_ac_charging_current_select_ = value_current_max_ac_charging_current_;
         this->current_max_charging_current_select_ = value_current_max_charging_current_;
+        this->operation_logic_select_ = value_operation_logic_;
         */
+
         this->state_ = STATE_POLL_DECODED;
         break;
       case POLLING_QPIGS:
