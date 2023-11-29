@@ -194,7 +194,7 @@ void Pipsolar::loop() {
           this->max_charging_time_at_cv_stage_->publish_state(value_max_charging_time_at_cv_stage_);
         }
         if (this->operation_logic_) {
-          this->operation_logic_->publish_state(operation_logic_);
+          this->operation_logic_->publish_state(value_operation_logic_);
         }
 
         this->state_ = STATE_IDLE;
