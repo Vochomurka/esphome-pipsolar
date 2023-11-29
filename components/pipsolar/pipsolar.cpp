@@ -190,6 +190,13 @@ void Pipsolar::loop() {
         if (this->pv_power_balance_switch_) {
           this->pv_power_balance_switch_->publish_state(value_pv_power_balance_ == 1);
         }
+        if (this->max_charging_time_at_cv_stage_) {
+          this->max_charging_time_at_cv_stage_->publish_state(value_max_charging_time_at_cv_stage_);
+        }
+        if (this->operation_logic_) {
+          this->operation_logic_->publish_state(operation_logic_);
+        }
+
         this->state_ = STATE_IDLE;
         break;
       case POLLING_QPIGS:
@@ -488,7 +495,8 @@ void Pipsolar::loop() {
                &value_output_source_priority_, &value_charger_source_priority_, &value_parallel_max_num_,   // NOLINT
                &value_machine_type_, &value_topology_, &value_output_mode_,                                 // NOLINT
                &value_battery_redischarge_voltage_, &value_pv_ok_condition_for_parallel_,                   // NOLINT
-               &value_pv_power_balance_);                                                                   // NOLINT
+               &value_pv_power_balance_, &value_max_charging_time_at_cv_stage_,                             // NOLINT
+               &value_operation_logic_);                                                                    // NOLINT
         if (this->last_qpiri_) {
           this->last_qpiri_->publish_state(tmp);
         }
