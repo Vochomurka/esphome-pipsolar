@@ -48,6 +48,8 @@ CONF_OUTPUT_MODE = "output_mode"
 CONF_BATTERY_REDISCHARGE_VOLTAGE = "battery_redischarge_voltage"
 CONF_PV_OK_CONDITION_FOR_PARALLEL = "pv_ok_condition_for_parallel"
 CONF_PV_POWER_BALANCE = "pv_power_balance"
+CONF_MAX_CHARGING_TIME_AT_CV_STAGE = "max_charging_time_at_cv_stage"
+CONF_OPERATION_LOGIC = "operation_logic"
 
 # QPIGS sensors
 
@@ -182,6 +184,12 @@ TYPES = {
         accuracy_decimals=1,
     ),
     CONF_PV_POWER_BALANCE: sensor.sensor_schema(
+        accuracy_decimals=1,
+    ),
+    CONF_MAX_CHARGING_TIME_AT_CV_STAGE: sensor.sensor_schema(
+        accuracy_decimals=1,
+    ),
+    CONF_OPERATION_LOGIC: sensor.sensor_schema(
         accuracy_decimals=1,
     ),
     CONF_GRID_VOLTAGE: sensor.sensor_schema(
