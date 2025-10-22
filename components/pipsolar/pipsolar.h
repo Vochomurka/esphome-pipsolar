@@ -208,6 +208,7 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
   PIPSOLAR_SELECT(current_max_charging_current_select, QPIRI)
 
   PIPSOLAR_SELECT(operation_logic_select, QPIRI)
+  PIPSOLAR_SELECT(max_charging_time_at_cv_stage_select, QPIRI)
 
   PIPSOLAR_VALUED_SELECT(charging_discharging_control_select, QBATCD, std::string)
 
