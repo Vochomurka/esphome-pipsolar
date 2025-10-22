@@ -17,7 +17,7 @@ CONF_CHARGING_DISCHARGING_CONTROL = "charging_discharging_control"
 CONF_CURRENT_MAX_CHARGING_CURRENT = "current_max_charging_current"
 CONF_CURRENT_MAX_AC_CHARGING_CURRENT = "current_max_ac_charging_current"
 CONF_OPERATION_LOGIC = "operation_logic"
-CONF_MAX_CHARGING_TIME_AT_CV_STAGE = "Max charging time at cv stage"
+CONF_MAX_CHARGING_TIME_AT_CV_STAGE = "max_charging_time_at_cv_stage"
 
 PipsolarSelect = pipsolar_ns.class_("PipsolarSelect", cg.Component, select.Select)
 
