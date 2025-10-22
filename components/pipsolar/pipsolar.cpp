@@ -201,6 +201,12 @@ void Pipsolar::loop() {
           std::string value = esphome::to_string(value_operation_logic_);
           this->operation_logic_select_->map_and_publish(value);
         }
+        //  select for max_charging_time_at_cv_stage
+        if (this->max_charging_time_at_cv_stage_select_) {
+          std::string value = esphome::to_string(value_max_charging_time_at_cv_stage_);
+          this->max_charging_time_at_cv_stage_select_->map_and_publish(value);
+        }
+
         
         this->state_ = STATE_IDLE;
         break;
